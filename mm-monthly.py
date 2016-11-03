@@ -17,7 +17,6 @@ def parse_post(fobj, month):
         m = regex.match(line)
         if m:
             rv.setdefault(m.group('listname'), Counter())[m.group('poster')] += 1
-#            rv[m.group('listname')] += 1
             print("POSTER " + m.group('poster'))
 
     print(rv)
